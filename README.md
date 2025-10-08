@@ -2,21 +2,10 @@
 An simple and cheap way to use capacitive sensors in combination with CAPSENSE
 
 
-# Indoor measurements on artifical turf
 
+# PicoLogger
+For obtaining the CAPSENSE data from the Sensor Hub, including remote control over an Web interface
 
-# Outdoor measurements different wetness levels
-## Self-capacitance Sensors
-## Mutual capacitance Sensors
+- Main page: http://192.168.4.1
+- Status page:  http://192.168.4.1/status
 
-# Outdoor measurement using robot (Stop and Go)
-## Self-capacitance Sensors
-## Mutual capacitance Sensors
-
-# Outdoor measurement using robot (Continous movement)
-## Self-capacitance Sensors
-## Mutual capacitance Sensors
-
-# Outdoor measurement using robot (normal lawn)
-## Self-capacitance Sensors
-## Mutual capacitance Sensors
