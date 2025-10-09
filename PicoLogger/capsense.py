@@ -1,3 +1,28 @@
+"""
+CapSense Sensor Reader for Raspberry Pi Pico 2W
+
+This module provides an interface for reading data from Infineon's PSOC CAPSENSE sensors
+over I2C. It's designed to work with PSOC 4000T CAPSENSE controllers and similar devices.
+
+Features:
+- Flexible I2C communication with configurable pins and frequency
+- Support for multiple CAPSENSE sensors on a single I2C bus
+- Automatic sensor detection and connection retries
+- Customizable sensor configuration
+- Data output in various formats (raw, structured dict, CSV)
+
+Hardware connections:
+- Connect GND to GND
+- Connect 3.3V to VCC (if needed)
+- Connect SDA to GPIO2 (default)
+- Connect SCL to GPIO3 (default)
+
+Requirements:
+- Raspberry Pi Pico with MicroPython
+- Infineon PSOC CAPSENSE microcontroller with sensor data in an EzI2C buffer
+"""
+
+
 import struct
 import time
 from machine import Pin, I2C

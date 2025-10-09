@@ -1,3 +1,31 @@
+"""
+PicoLogger - Web-based Environmental and CapSense Data Logger
+
+This application transforms a Raspberry Pi Pico 2W into a standalone data logging system
+that captures readings from both a BME280 environmental sensor and PSoC 4000T CapSense
+touch sensors into an .csv file. It creates its own WiFi access point with a web interface for configuring
+and controlling logging sessions.
+
+Features:
+- Self-hosted WiFi access point with browser-based control panel
+- Logging of temperature, pressure, humidity, and capacitive touch data
+- Configurable logging duration and sample rate
+- Support for batch logging (multiple sequential sessions)
+- CSV data output with timestamps for easy analysis
+- LED status indication during logging sessions
+- Error handling and recovery mechanisms
+
+Hardware requirements:
+- Raspberry Pi Pico 2W
+- BME280 environmental sensor (I2C0: SCL=GPIO5, SDA=GPIO4)
+- PSoC 4000T CapSense development board (I2C1: SCL=GPIO3, SDA=GPIO2)
+- Power supply via USB or external source
+
+Default WiFi credentials:
+- SSID: PicoLogger
+- Password: capsense
+
+"""
 import network
 import socket
 import time
@@ -7,8 +35,8 @@ from capsense import CapsenseReader
 import os
 import uasyncio as asyncio
 
-AP_NAME = "PicoLogger_0"
-AP_PW = "capsense123"
+AP_NAME = "PicoLogger"
+AP_PW = "capsense"
 
 logging_status = {
     'active': False,

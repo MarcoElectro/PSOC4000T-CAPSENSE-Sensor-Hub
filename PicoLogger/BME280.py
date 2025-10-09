@@ -1,3 +1,24 @@
+"""
+BME280 Sensor Driver for Raspberry Pi Pico 2W
+
+This module provides a MicroPython driver for the Bosch BME280 sensor, which measures
+temperature, pressure, and humidity. The BME280 is a digital environmental sensor
+that communicates via I2C or SPI (this implementation uses I2C).
+
+Features:
+- Temperature measurement (°C)
+- Barometric pressure measurement (hPa)
+- Humidity measurement (%)
+- Multiple oversampling modes for different power/accuracy tradeoffs
+
+Hardware connections:
+- Connect VIN to 3.3V
+- Connect GND to ground
+- Connect SCL to I2C SCL pin on the Pico
+- Connect SDA to I2C SDA pin on the Pico
+
+"""
+
 from machine import I2C
 import time
 
