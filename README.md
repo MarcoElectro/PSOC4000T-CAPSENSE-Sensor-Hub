@@ -1,6 +1,9 @@
 # PSOC4000T-CAPSENSE-Sensor-Hub
 An simple way to use capacitive sensors in combination with Infineon's CAPSENSE technology.
 
+<img src="SensorHub.png" alt="Sensor Hub PCB" width="300" height="200">
+
+
 # Setup
 After the PCB is soldered, the Rasperry Pi Pico needs to be connected as follows:
 | Raspberry Pi Pico 2W Pin | Connection | Function |
